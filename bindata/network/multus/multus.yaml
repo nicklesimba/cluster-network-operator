@@ -636,6 +636,9 @@ spec:
       name: whereabouts-reconciler
   updateStrategy:
     type: RollingUpdate
+    rollingUpdate: 
+      maxUnavailable: "10%"
+      maxSurge: "10%"
   template:
     metadata:
       labels:
